@@ -2,9 +2,9 @@ NAME =	megaphone
 CC = c++
 CFLAGS += -Wall -Wextra -Werror -std=c++98
 
-SRC = ./megaphone.cpp
+SRC = megaphone.cpp
 
-OBJ = (SRC:.cpp=.o)
+OBJ = $(SRC:.cpp=.o)
 
 .phony: all re clean fclean
 
