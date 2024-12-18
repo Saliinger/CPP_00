@@ -2,7 +2,7 @@ NAME =	megaphone
 CC = c++
 CFLAGS += -Wall -Wextra -Werror -std=c++98
 
-SRC = megaphone.cpp
+SRC = phonebook.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
