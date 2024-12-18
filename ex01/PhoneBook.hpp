@@ -6,11 +6,12 @@
 #define PHONEBOOK_HPP
 
 #include <iostream>
+#include "Contact.hpp"
 
-class Contact {
+class PhoneBook {
   private:
-
+  Contact Contact[9];
   public:
-}
+} ;
 
 #endif //PHONEBOOK_HPP

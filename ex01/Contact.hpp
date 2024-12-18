@@ -13,6 +13,7 @@ class Contact {
     public:
       Contact();
       void setContact(std::string name, std::string lastName, std::string nickname,std::string phone, std::string _darkestSecret);
+      void printContact();
       ~Contact();
 };
 
