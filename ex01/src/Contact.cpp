@@ -8,12 +8,20 @@ Contact::~Contact(){
   return ;
 }
 
+std::string trimAndFormat(const std::string &str)
+{
+  if (str.length() > 9) {
+    return str.substr(0, 8) + ".";
+  }
+  return str;
+}
+
 void Contact::printLine(int i)
 {
   std::cout << std::setw(10) << i << "|"
-    << std::setw(10) << this->_name << "|"
-    << std::setw(10) << this->_lastName << "|"
-    << std::setw(10) << this->_nickname << std::endl;
+    << std::setw(10) << trimAndFormat(this->_name) << "|"
+    << std::setw(10) << trimAndFormat(this->_lastName) << "|"
+    << std::setw(10) << trimAndFormat(this->_nickname) << std::endl;
 }
 
 void Contact::setContact(std::string name, std::string lastName, std::string nickname, std::string phone, std::string darkestSecret) {
