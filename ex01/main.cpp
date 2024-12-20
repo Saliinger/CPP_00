@@ -15,14 +15,12 @@ bool is_valid_input(std::string input, int type)
     for (int i = 0; i < input.length(); i++)
       if (!std::isalpha(input[i]))
         return std::cout << "Error: "<< input[i] << " is not a letter" << std::endl, false;
-    //check text fields
   }
   if (type == 1)
   {
     for (int i = 0; i < input.length(); i++)
       if (!std::isdigit(input[i]))
         return std::cout << "Error: "<< input[i] << " is not a number" << std::endl, false;
-    // check number only
   }
   return true;
 }
