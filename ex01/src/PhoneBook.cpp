@@ -33,7 +33,7 @@ void PhoneBook::printPhoneBook()
 {
 	int i = 0;
 
-	std::cout << "this is the PhoneBook" << std::endl;
+	std::cout << std::string(50, '_') << "\n";
 	std::cout << std::setw(10) << "Index" << "|"
 		  << std::setw(10) << "First Name" << "|"
 		  << std::setw(10) << "Last Name" << "|"
@@ -52,16 +52,7 @@ void PhoneBook::addContact(std::string name, std::string lastName, std::string n
 	this->_numContacts += 1;
 }
 
-void PhoneBook::searchContact()
+void PhoneBook::searchContact(int index)
 {
-	std::string index;
-	std::cout << "Enter the index of the contact you want to search: ";
-	std::getline(std::cin, index);
-	// if (stoi(index) > 0 && (stoi(index) - 1 <= 0 ))
-	// {
-	// 	std::cout << "Index out of range" << std::endl;
-	// 	return;
-	// }
-	std::cout << index <<std::endl;
-	this->_contacts[0].printContact();
+	this->_contacts[index].printContact();
 }

@@ -25,9 +25,11 @@ void Contact::setContact(std::string name, std::string lastName, std::string nic
 }
 
 void Contact::printContact(){
+  std::cout << std::string(50, '_') << "\n";
   std::cout << "First Name: " << _name << std::endl;
   std::cout << "Last Name: " << _lastName << std::endl;
   std::cout << "Nickname: " << _nickname << std::endl;
   std::cout << "Phone: " << _phone << std::endl;
   std::cout << "Darkest Secret: " << _darkestSecret << std::endl;
+  std::cout << std::string(50, '_') << "\n";
 }

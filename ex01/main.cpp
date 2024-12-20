@@ -17,12 +17,26 @@ void add_handler(PhoneBook *phoneBook)
   phoneBook->addContact(name, lastName, nickname, phone, darkestSecret);
 }
 
+void search_handler(PhoneBook *phoneBook)
+{
+  std::string input;
+  int index = 0;
+  fields("Enter the index of the contact you want to search: ", &input);
+  index = std::stoi(input) - 1;
+  if (index > 0 && index <= 8)
+  {
+    std::cout << "Invalid Input" << std::endl;
+    return;
+  }
+  phoneBook->searchContact(index);
+}
+
 int command_handler(std::string command, PhoneBook *phoneBook)
 {
   if (command == "ADD")
     add_handler(phoneBook);
   else if (command == "SEARCH")
-    phoneBook->searchContact();
+    search_handler(phoneBook);
   else if (command == "EXIT")
     return 1;
   return 0;
