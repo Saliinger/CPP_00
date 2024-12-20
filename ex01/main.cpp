@@ -36,7 +36,7 @@ void fields(std::string str, std::string *dest, int type) {
 void add_handler(PhoneBook *phoneBook)
 {
   std::string name, lastName, nickname, phone, darkestSecret;
-  fields("Enter the contact information: ", &name,0);
+  fields("Name: ", &name,0);
   fields("Last Name: ", &lastName, 0);
   fields("Nickname: ", &nickname, 0);
   fields("Phone: ", &phone, 1);
