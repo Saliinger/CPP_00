@@ -15,7 +15,6 @@ int main(){
   std::string command;
   PhoneBook phoneBook;
 
-
   while (true)
   {
     phoneBook.printPhoneBook();

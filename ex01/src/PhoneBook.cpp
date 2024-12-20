@@ -19,7 +19,6 @@
 
 #include "../include/PhoneBook.hpp"
 
-
 PhoneBook::PhoneBook()
 {
 	return ;
@@ -70,7 +69,7 @@ void PhoneBook::searchContact()
 	std::string index;
 	std::cout << "Enter the index of the contact you want to search: ";
 	std::getline(std::cin, index);
-	if (index <= "0") || index > this->_numContacts)
+	if (stoi(index) - 1 <= 0 || stoi(index) - 1 > this->_numContacts)
 		std::cout << "Index out of range" << std::endl;
-	this->_contacts[index].printContact();
+	this->_contacts[stoi(index) - 1].printContact();
 }
