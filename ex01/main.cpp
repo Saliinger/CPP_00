@@ -54,6 +54,8 @@ void search_handler(PhoneBook *phoneBook)
 {
   std::string input;
   int index = 0;
+
+  phoneBook->printPhoneBook();
   fields("Enter the index of the contact you want to search: ", &input, 1);
   index = std::stoi(input) - 1;
   if (index > 0 && index <= 8)
@@ -75,13 +77,20 @@ int command_handler(std::string command, PhoneBook *phoneBook)
   return 0;
 }
 
+void print_menu()
+{
+  std::cout << "ADD: Add a contact" << std::endl;
+  std::cout << "SEARCH: Search a contact" << std::endl;
+  std::cout << "EXIT: Exit the program" << std::endl;
+}
+
 int main(){
   std::string command;
   PhoneBook phoneBook;
 
   while (true)
   {
-    phoneBook.printPhoneBook();
+    print_menu();
     std::cout << "Enter a command: ";
     if (std::cin.eof() == true)
     {

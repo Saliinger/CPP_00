@@ -17,7 +17,7 @@ class Contact {
     void setContact(std::string name, std::string lastName, std::string nickname,std::string phone, std::string _darkestSecret);
     void printContact();
     void printLine(int i);
-    std::string trimAndFormat(const std::string &str);
+    static std::string trimAndFormat(const std::string &str);
     ~Contact();
 };
 
