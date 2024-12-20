@@ -11,9 +11,9 @@ Contact::~Contact(){
 void Contact::printLine(int i)
 {
   std::cout << std::setw(10) << i << "|"
-    << std::setw(10) << "First Name" << "|"
-    << std::setw(10) << "Last Name" << "|"
-    << std::setw(10) << "Nickname" << std::endl;
+    << std::setw(10) << this->_name << "|"
+    << std::setw(10) << this->_lastName << "|"
+    << std::setw(10) << this->_nickname << std::endl;
 }
 
 void Contact::setContact(std::string name, std::string lastName, std::string nickname, std::string phone, std::string darkestSecret) {
@@ -31,5 +31,3 @@ void Contact::printContact(){
   std::cout << "Phone: " << _phone << std::endl;
   std::cout << "Darkest Secret: " << _darkestSecret << std::endl;
 }
-
-

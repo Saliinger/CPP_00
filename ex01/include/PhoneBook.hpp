@@ -11,7 +11,7 @@ class PhoneBook {
   public:
   PhoneBook();
   ~PhoneBook();
-  void addContact();
+  void addContact(std::string name, std::string lastName, std::string nickname, std::string phone, std::string darkestSecret);
   void searchContact();
   void printPhoneBook();
   void fields(std::string str, std::string dest);

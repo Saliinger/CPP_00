@@ -46,20 +46,8 @@ void PhoneBook::printPhoneBook()
 	}
 }
 
-void PhoneBook::addContact()
+void PhoneBook::addContact(std::string name, std::string lastName, std::string nickname, std::string phone, std::string darkestSecret)
 {
-	std::string name, lastName, nickname, phone, darkestSecret;
-	std::cout << "Enter the contact information: " << std::endl;
-	std::cout << "Name: ";
-	std::getline(std::cin, name);
-	std::cout << "Last Name: ";
-	std::getline(std::cin, lastName);
-	std::cout << "Nickname: ";
-	std::getline(std::cin, nickname);
-	std::cout << "Phone: ";
-	std::getline(std::cin, phone);
-	std::cout << "Darkest Secret: ";
-	std::getline(std::cin, darkestSecret);
 	this->_contacts[0].setContact(name, lastName, nickname, phone, darkestSecret);
 	this->_numContacts += 1;
 }
@@ -69,7 +57,11 @@ void PhoneBook::searchContact()
 	std::string index;
 	std::cout << "Enter the index of the contact you want to search: ";
 	std::getline(std::cin, index);
-	if (stoi(index) - 1 <= 0 || stoi(index) - 1 > this->_numContacts)
-		std::cout << "Index out of range" << std::endl;
-	this->_contacts[stoi(index) - 1].printContact();
+	// if (stoi(index) > 0 && (stoi(index) - 1 <= 0 ))
+	// {
+	// 	std::cout << "Index out of range" << std::endl;
+	// 	return;
+	// }
+	std::cout << index <<std::endl;
+	this->_contacts[0].printContact();
 }
