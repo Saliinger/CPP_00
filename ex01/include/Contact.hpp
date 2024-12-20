@@ -2,6 +2,7 @@
 #define CONTACT_HPP
 
 #include <iostream>
+#include <iomanip>
 
 class Contact {
   private:
@@ -14,6 +15,7 @@ class Contact {
       Contact();
       void setContact(std::string name, std::string lastName, std::string nickname,std::string phone, std::string _darkestSecret);
       void printContact();
+	  void printLine(int i);
       ~Contact();
 };
 
