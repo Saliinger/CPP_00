@@ -49,7 +49,6 @@ void PhoneBook::printPhoneBook()
 
 void PhoneBook::addContact(std::string name, std::string lastName, std::string nickname, std::string phone, std::string darkestSecret)
 {
-	printf("Adding contact\ncontact nbr: %d\n", this->_numContacts);
 	if (this->_numContacts > 0)
 	{
 		for (int i = 7; i > 0; i--)
