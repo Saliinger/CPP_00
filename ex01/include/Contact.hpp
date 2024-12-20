@@ -11,12 +11,13 @@ class Contact {
     std::string _nickname;
     std::string _phone;
     std::string _darkestSecret;
-    public:
-      Contact();
-      void setContact(std::string name, std::string lastName, std::string nickname,std::string phone, std::string _darkestSecret);
-      void printContact();
-	  void printLine(int i);
-      ~Contact();
+
+  public:
+    Contact();
+    void setContact(std::string name, std::string lastName, std::string nickname,std::string phone, std::string _darkestSecret);
+    void printContact();
+    void printLine(int i);
+    ~Contact();
 };
 
 #endif //CONTACT_HPP

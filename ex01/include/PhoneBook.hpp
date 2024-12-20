@@ -6,15 +6,15 @@
 
 class PhoneBook {
   private:
-  Contact _contacts[8];
-  int _numContacts;
+	  Contact _contacts[8];
+	  int _numContacts;
   public:
-  PhoneBook();
-  ~PhoneBook();
-  void addContact(std::string name, std::string lastName, std::string nickname, std::string phone, std::string darkestSecret);
-  void searchContact(int index);
-  void printPhoneBook();
-  void fields(std::string str, std::string dest);
+    PhoneBook();
+    ~PhoneBook();
+    void addContact(std::string name, std::string lastName, std::string nickname, std::string phone, std::string darkestSecret);
+    void searchContact(int index);
+    void printPhoneBook();
+    void fields(std::string str, std::string dest);
 } ;
 
 
