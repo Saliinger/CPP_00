@@ -25,10 +25,16 @@ bool is_valid_input(std::string input, int type)
   return true;
 }
 
-void fields(std::string str, std::string *dest, int type) {
+void fields(std::string str, std::string *dest, int type)
+{
   do {
     std::cout << str;
     std::getline(std::cin, *dest);
+    if (std::cin.eof() == true)
+    {
+      std::cout << "Exiting PhoneBook now." << std::endl;
+      exit(0);
+    }
   } while (!is_valid_input(*dest, type));
 }
 
