@@ -7,6 +7,8 @@
 
 bool is_valid_input(std::string input, int type)
 {
+  if (input.length() == 0)
+    return std::cout << "Error: Empty input" << std::endl, false;
   for (int i = 0; i < input.length(); i++)
     if (!std::isprint(input[i]))
       return std::cout << "Error: "<< input[i] << " is not printable" << std::endl, false;
