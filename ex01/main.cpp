@@ -77,6 +77,11 @@ int main(){
   {
     phoneBook.printPhoneBook();
     std::cout << "Enter a command: ";
+    if (std::cin.eof() == true)
+    {
+      std::cout << "Exiting PhoneBook now." << std::endl;
+      break;
+    }
     getline(std::cin, command);
     if (command_handler(command, &phoneBook) == 1)
       break;
