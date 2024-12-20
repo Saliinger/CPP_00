@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anoukan <anoukan@student.42mulhouse.fr>    +#+  +:+       +#+        */
+/*   By: anoukan <anoukan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 17:57:18 by anoukan           #+#    #+#             */
-/*   Updated: 2024/08/31 18:20:32 by anoukan          ###   ########.fr       */
+/*   Updated: 2024/12/20 17:33:47 by anoukan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int ac, char **av)
 		i = 0;
 		while (av[j][i])
 		{
-			std::cout << (char)toupper(av[j][i]);
+			std::cout << std::toupper(av[j][i]);
 			i++;
 		}
 		j++;

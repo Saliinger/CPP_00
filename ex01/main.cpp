@@ -29,11 +29,11 @@ bool is_valid_input(std::string input, int type)
 
 void fields(std::string str, std::string *dest, int type)
 {
-  while ( !is_valid_input(*dest, type))
-  {
+  // while (!is_valid_input(*dest, type))
+  // {
     std::cout << str;
     std::getline(std::cin, *dest);
-  }
+  // }
 }
 
 void add_handler(PhoneBook *phoneBook)
