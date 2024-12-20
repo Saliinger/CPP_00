@@ -27,14 +27,13 @@ bool is_valid_input(std::string input, int type)
   return true;
 }
 
-void fields(std::string str, std::string *dest, int type)
-{
-  // while (!is_valid_input(*dest, type))
-  // {
+void fields(std::string str, std::string *dest, int type) {
+  do {
     std::cout << str;
     std::getline(std::cin, *dest);
-  // }
+  } while (!is_valid_input(*dest, type));
 }
+
 
 void add_handler(PhoneBook *phoneBook)
 {
