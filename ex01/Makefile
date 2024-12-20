@@ -4,7 +4,6 @@ CFLAGS += -Wall -Wextra -Werror -std=c++98 -g3
 
 SRC =	./src/PhoneBook.cpp \
 		./src/Contact.cpp \
-		./src/utils.cpp \
 		main.cpp
 
 OBJ = $(SRC:.cpp=.o)

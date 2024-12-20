@@ -21,6 +21,7 @@
 
 PhoneBook::PhoneBook()
 {
+	this->_numContacts = 0;
 	return ;
 }
 
@@ -48,8 +49,15 @@ void PhoneBook::printPhoneBook()
 
 void PhoneBook::addContact(std::string name, std::string lastName, std::string nickname, std::string phone, std::string darkestSecret)
 {
+	printf("Adding contact\ncontact nbr: %d\n", this->_numContacts);
+	if (this->_numContacts > 0)
+	{
+		for (int i = 7; i > 0; i--)
+			this->_contacts[i] = this->_contacts[i - 1];
+	}
 	this->_contacts[0].setContact(name, lastName, nickname, phone, darkestSecret);
-	this->_numContacts += 1;
+	if (this->_numContacts < 8)
+		this->_numContacts++;
 }
 
 void PhoneBook::searchContact(int index)
