@@ -28,7 +28,7 @@ int	main(int ac, char **av)
 		i = 0;
 		while (av[j][i])
 		{
-			std::cout << std::toupper(av[j][i]);
+			std::cout << static_cast<char>(toupper(av[j][i]));
 			i++;
 		}
 		j++;

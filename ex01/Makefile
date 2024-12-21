@@ -1,6 +1,6 @@
 NAME =	PhoneBook
-CC = c++
-CFLAGS += -Wall -Wextra -Werror -std=c++98 -g3
+CXX = c++
+CXXFLAGS += -Wall -Wextra -Werror -std=c++98 -g3
 
 SRC =	./src/PhoneBook.cpp \
 		./src/Contact.cpp \
@@ -10,10 +10,15 @@ OBJ = $(SRC:.cpp=.o)
 
 .phony: all re clean fclean
 
+.phony: all re clean fclean
+
 all:		$(NAME)
 
 $(NAME):	$(OBJ)
-			$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+			$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+
+%.o:		%.cpp
+			$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 			rm -f $(OBJ)
