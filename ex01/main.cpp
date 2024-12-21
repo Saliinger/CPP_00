@@ -1,5 +1,4 @@
 #include "include/PhoneBook.hpp"
-#include <cstdlib>
 
 // need to check if the char are printable or not and else
 // need to add a while the fild is empty keep asking for it
@@ -10,18 +9,18 @@ bool is_valid_input(std::string input, int type)
 {
   if (input.length() == 0)
     return std::cout << "Error: Empty input" << std::endl, false;
-  for (unsigned long i = 0; i < input.length(); i++)
+  for (int i = 0; i < input.length(); i++)
     if (!std::isprint(input[i]))
       return std::cout << "Error: "<< input[i] << " is not printable" << std::endl, false;
   if (type == 0)
   {
-    for (unsigned long  i = 0; i < input.length(); i++)
+    for (int i = 0; i < input.length(); i++)
       if (!std::isalpha(input[i]))
         return std::cout << "Error: "<< input[i] << " is not a letter" << std::endl, false;
   }
   if (type == 1)
   {
-    for (unsigned long  i = 0; i < input.length(); i++)
+    for (int i = 0; i < input.length(); i++)
       if (!std::isdigit(input[i]))
         return std::cout << "Error: "<< input[i] << " is not a number" << std::endl, false;
   }
@@ -60,8 +59,8 @@ void search_handler(PhoneBook *phoneBook)
 
   phoneBook->printPhoneBook();
   fields("Enter the index of the contact you want to search: ", &input, 1);
-  index = atoi(input.c_str()) - 1;
-  if (index > 0 && index <= 8)
+  index = std::stoi(input) - 1;
+  if (index < 0 || index > 8)
   {
     std::cout << "Invalid Input" << std::endl;
     return;

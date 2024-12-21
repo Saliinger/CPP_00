@@ -14,7 +14,6 @@ class PhoneBook {
     void addContact(std::string name, std::string lastName, std::string nickname, std::string phone, std::string darkestSecret);
     void searchContact(int index);
     void printPhoneBook();
-    void fields(std::string str, std::string dest);
 } ;
 
 
