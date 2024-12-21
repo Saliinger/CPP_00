@@ -60,7 +60,7 @@ void search_handler(PhoneBook *phoneBook)
 
   phoneBook->printPhoneBook();
   fields("Enter the index of the contact you want to search: ", &input, 1);
-  index = std::stoi(input) - 1;
+  index = atoi(input.c_str()) - 1;
   if (index > 0 && index <= 8)
   {
     std::cout << "Invalid Input" << std::endl;
