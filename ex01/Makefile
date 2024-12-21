@@ -10,8 +10,6 @@ OBJ = $(SRC:.cpp=.o)
 
 .phony: all re clean fclean
 
-.phony: all re clean fclean
-
 all:		$(NAME)
 
 $(NAME):	$(OBJ)
