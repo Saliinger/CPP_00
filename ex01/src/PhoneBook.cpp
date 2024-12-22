@@ -61,5 +61,10 @@ void PhoneBook::addContact(std::string name, std::string lastName, std::string n
 
 void PhoneBook::searchContact(int index)
 {
-	this->_contacts[index].printContact();
+    if (index < 0 || index > 8 || index > this->_numContacts || (this->_numContacts == 0 && index== 0))
+    {
+        std::cout << "Invalid Input" << std::endl;
+        return;
+    }
+    this->_contacts[index].printContact();
 }
